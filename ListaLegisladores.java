@@ -21,7 +21,7 @@ public class ListaLegisladores {
                             
                             Diputado Dip = (Diputado) legis;
                             System.out.println(Dip.toString());
-                             System.out.println(dip.getCamaraEnquetrabaja());  
+                             System.out.println(dip.getCamaraEQT());  
                            
     }
 }
