@@ -28,6 +28,35 @@ public class Legisladores {
         }while (Opcion!=3);
     }//fin main
     static void CrearLegislador(ListaLegisladores ListaLeg){
+       Scanner entrada = new Scanner(System.in);
+ String nombre,domicilio,provinciaQueRepresenta ;
+  int edad;
+  int op;
+      System.out.println("Nombre?");
+       Nombre =entrada.nextLine();
+       System.out.println("Edad?");
+        Edad =entrada.nextInt();
+        entada.nextLine();
+        System.out.println("Domicilio?");
+        Domicilio =entrada.nextLine();
+        System.out.println("Provincia que representa");
+        String provinciaQueRepresenta = entada.nextLine();
+        System.out.println("1. Es Diputado, 2. Es Senador");
+        op = entrada.nextInt();
+        if(op == 1){
+            Diputado dip = new Diputado(provinciaQueRepresenta, nombre, edad, domicilio); /*Se crea un objeto o instancia dentro de la clase Diputado donde se
+            almacenaran los datos ingresados por usuario*/
+            
+                Listaleg.agregarLegisLadores(dip); //Se usa para añadir el legislador a la lista
+        } else 
+            if(op == 2){
+                Senador senad = new Senador(provinciaQueRepresenta, nombre, edad, domicilio); /*Se crea un objeto o instancia dentro de la clase Senador donde se
+                almacenaran los datos ingresados por usuario*/
+                Listaleg.agregarLegisLadores(senad); //Se usa para añadir el legislador a la lista
+            }
+            else 
+               System.out.println("Opcion no valida, por favor ingresa una opcion correcta..."); //Si la opcion elegida no es valida
         
+          
     }
 }
